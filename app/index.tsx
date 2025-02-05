@@ -20,6 +20,7 @@ import {
 } from "react-native-vision-camera";
 import { BlurView } from "expo-blur";
 import { FontAwesome5 } from "@expo/vector-icons";
+import ZoomControls from "@/components/ZoomControls";
 
 export default function HomeScreen() {
   const { hasPermission } = useCameraPermission();
@@ -100,6 +101,27 @@ export default function HomeScreen() {
             </Text>
           </BlurView>
         </View>
+
+        {showZoomControls ? (
+          <ZoomControls
+            setZoom={setZoom}
+            setShowZoomControls={setShowZoomControls}
+            zoom={zoom ?? 1}
+          />
+        ) : showExposureControls ? (
+          <ExposureControls
+            setExposure={setExposure}
+            setShowExposureControls={setShowExposureControls}
+            exposure={exposure}
+          />
+        ) : (
+          <View style={{ flex: 1, padding: 10 }}>
+            {/* Top section */}
+            <View
+              style={{
+                flex: 0.7,
+              }}
+            >
         <View style={{ flex: 1 }}>
           {/* Top Section of controls */}
           <View style={{ flex: 0.7 }}>
