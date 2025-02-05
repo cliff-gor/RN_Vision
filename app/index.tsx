@@ -169,7 +169,7 @@ export default function HomeScreen() {
 
             <VisionButton
               iconName="settings-outline"
-              onPress={() => router.push("/_sitemap")}
+              onPress={() => router.push("/permissions")}
               containerStyle={{ alignSelf: "center" }}
             />
           </View>
