@@ -21,6 +21,7 @@ import {
 import { BlurView } from "expo-blur";
 import { FontAwesome5 } from "@expo/vector-icons";
 import ZoomControls from "@/components/ZoomControls";
+import ExposureControls from "@/components/ExposureControls";
 
 export default function HomeScreen() {
   const { hasPermission } = useCameraPermission();
@@ -115,13 +116,6 @@ export default function HomeScreen() {
             exposure={exposure}
           />
         ) : (
-          <View style={{ flex: 1, padding: 10 }}>
-            {/* Top section */}
-            <View
-              style={{
-                flex: 0.7,
-              }}
-            >
         <View style={{ flex: 1 }}>
           {/* Top Section of controls */}
           <View style={{ flex: 0.7 }}>
@@ -207,6 +201,7 @@ export default function HomeScreen() {
             />
           </View>
         </View>
+        )}
       </SafeAreaView>
     </>
   );
