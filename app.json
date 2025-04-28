@@ -4,7 +4,7 @@
     "slug": "RN_Vision",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/ic_launcher.png",
+    "icon": "./assets/images/playstore.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
